@@ -3,18 +3,42 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const PageTitle = "Tyler's Story";
+
+const identity = {
+  firstName: "Tyler",
+  country: "Austin",
+  occupation: "Technical Writer",
+  hobbies: ["photography", "birdwatching", "baseball"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={PageTitle} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>Tyler's Story</h1>
+			<h1>{PageTitle}</h1>
 			<p>Need to get autocomplete going...</p>
+
+			<ul>
+				<li>My name is {identity.firstName}</li>
+				<li>I live in {identity.country}</li>
+				{identity.hobbies.length >= 2 &&
+					<li>Two of my hobbies are {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+				}
+			</ul>
+
+			<p>My skills are:</p>
+			<ul>
+				{skills.map((skill) => <li>{skill}</li>)}
+			</ul>
 		</main>
 		<Footer />
 	</body>
