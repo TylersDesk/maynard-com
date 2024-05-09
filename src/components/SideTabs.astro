@@ -1,0 +1,156 @@
+---
+import { Image } from 'astro:assets';
+let backgroundUrl = 'url(/images/maynard-bg-block.png)';
+
+---
+
+<div class="sidetabs flex">
+    <div id="tabs" class="left-col flex-none">
+        <p>Helping men:</p>
+        <h2 data-tab="1" class="active">Lead in relationship</h2>
+        <h2 data-tab="2">Resolve discomfort</h2>
+        <h2 data-tab="3">Connect to their masculine core</h2>
+        <h2 data-tab="4">Establish presence in life</h2>
+    </div>
+    <div class="right-col grow">
+        <div class="tab-content" data-content="1">
+            <h3>Establish Safety.</h3>
+            <p>One of the ideas that has been on repeat in my adulthood is this idea of “killing the boy, and becoming the man”.</p>
+            <ul>
+                <li>Do that</li>
+                <li>Do some of this</li>
+                <li>Just another thing for this one</li>
+            </ul>
+            <p>Don't forget where you came from. Who you are. And what you do.</p>
+        </div>
+        <div class="tab-content hidden" data-content="2">
+            <h3>Addressing the discomfort.</h3>
+            <p>One of the ideas that has been on repeat in my adulthood is this idea of “killing the boy, and becoming the man”.</p>
+            <ul>
+                <li>Do that</li>
+                <li>Do some of this</li>
+                <li>Just another thing for this one</li>
+            </ul>
+            <p>Don't forget where you came from. Who you are. And what you do.</p>
+        </div>
+        <div class="tab-content hidden" data-content="3">
+            <h3>We are masculine.</h3>
+            <p>One of the ideas that has been on repeat in my adulthood is this idea of “killing the boy, and becoming the man”.</p>
+            <ul>
+                <li>Do that</li>
+                <li>Do some of this</li>
+                <li>Just another thing for this one</li>
+            </ul>
+            <p>Don't forget where you came from. Who you are. And what you do.</p>
+        </div>
+        <div class="tab-content hidden" data-content="4">
+            <h3>Presence</h3>
+            <p>One of the ideas that has been on repeat in my adulthood is this idea of “killing the boy, and becoming the man”.</p>
+            <ul>
+                <li>Do that</li>
+                <li>Do some of this</li>
+                <li>Just another thing for this one</li>
+            </ul>
+            <p>Don't forget where you came from. Who you are. And what you do.</p>
+        </div>
+    </div>
+</div>
+<style define:vars={{ backgroundUrl }}>
+    .sidetabs {
+        margin-top:80px;
+        background-image:var(--backgroundUrl);
+        background-position: bottom;
+        background-size: 900px;
+        background-repeat: no-repeat;
+        background-position-x: 80px;
+        background-position-y: 410px;
+        padding-bottom: 310px;
+    }
+
+    .left-col {
+        max-width:340px;
+        border-right:1px solid #fff;
+        padding-right:75px;
+    }
+
+    .left-col p {
+        font-size:14px;
+    }
+
+    .left-col h2 {
+        font-size:1.4em;
+        padding-bottom:30px;
+        border-bottom: 1px solid rgb(160, 160, 160);
+        margin-top:30px;
+        margin-bottom:30px;
+        color:rgb(160, 160, 160);
+        cursor: pointer;
+        transform: scale(1); /* you need a scale here to allow it to transition in both directions */
+        transition: 0.15s all ease;
+
+        &.active {
+            color:#fff;
+        }
+
+        &:hover {
+            padding-left:10px;
+        }
+    }
+    .right-col {
+        padding-left:75px;
+    }
+
+    .right-col {
+        
+        h3 {
+            font-size: .8em;
+            font-weight: 800;
+            font-family: 'Source Sans 3', sans-serif;
+            margin-bottom:30px;
+        }
+
+        p {
+            font-size: .8em;
+        }
+
+        ul{
+            margin-bottom: 30px;
+
+            li {
+                list-style:disc;
+                margin-left:30px;
+                font-size: .8em;
+            }
+        }
+    }
+</style>
+<script>
+
+    // Find our component DOM on the page.
+    const buttons = document.querySelectorAll('#tabs h2');
+    const tabContent = document.querySelectorAll('.tab-content');
+
+    // Add event listeners to fire confetti when a button is clicked.
+    buttons.forEach((button) => {
+        button.addEventListener('click', function(){
+            buttons.forEach(Element=> {
+                Element.classList.remove('active');
+            });
+            
+            let currentTab = this.dataset.tab;
+            
+            this.classList.add('active');
+            showTabContent(currentTab);
+        });
+    });
+
+    function showTabContent(showMe){
+
+        tabContent.forEach(element => {
+            element.classList.add('hidden');            
+        });
+
+        tabContent[showMe -1].classList.remove('hidden');
+
+    };
+</script>

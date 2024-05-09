@@ -8,6 +8,7 @@
 	--accent: #2337ff;
 	--accent-dark: #000d8a;
 	--black: 15, 18, 25;
+	--white: #fff;
 	--gray: 96, 115, 159;
 	--gray-light: 229, 233, 240;
 	--gray-dark: 34, 41, 57;
@@ -15,37 +16,28 @@
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
 }
-@font-face {
-	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-regular.woff') format('woff');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-bold.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
+
 body {
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Source Sans 3', sans-serif;
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: #151515;
+	position: top left;
+	background:#151515;
+	background-repeat: no-repeat;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
-	font-size: 20px;
+	font-size: 24px;
+	font-weight: 200;
 	line-height: 1.7;
+	color:#fff;
 }
 main {
-	width: 720px;
+	width: 939px;
 	max-width: calc(100% - 2em);
 	margin: auto;
-	padding: 3em 1em;
+	padding: 1em 1em;
 }
 h1,
 h2,
@@ -54,8 +46,9 @@ h4,
 h5,
 h6 {
 	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
+	color: rgb(var(--white));
 	line-height: 1.2;
+	font-family:Georgia, 'Times New Roman', Times, serif;
 }
 h1 {
 	font-size: 3.052em;
@@ -82,6 +75,29 @@ a {
 a:hover {
 	color: var(--accent);
 }
+a.btn-outline {
+	border:2px solid #fff;
+	color:#fff;
+	padding:5px 10px;
+	font-size:.8em;
+	font-weight: normal;
+	transform: scale(1); /* you need a scale here to allow it to transition in both directions */
+	transition: 0.15s all ease;
+
+	&:hover {
+		background-color:#141414;
+		color:#fff;
+	}
+
+}
+a.btn-outline.black {
+	border-color: #151515;
+	color:#151515;
+
+	&:hover {
+		color:#fff;
+	}
+}
 p {
 	margin-bottom: 1em;
 }
@@ -101,7 +117,6 @@ table {
 img {
 	max-width: 100%;
 	height: auto;
-	border-radius: 8px;
 }
 code {
 	padding: 2px 5px;

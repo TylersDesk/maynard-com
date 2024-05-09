@@ -1,0 +1,69 @@
+---
+import Image from 'astro/components/Image.astro';
+import tylerImage from '../images/tyler-sitting.jpg';
+import tylerPodcast from '../images/tyler-podcast.jpg';
+---
+
+<div class="tyler-block">
+    <div class="container mx-auto flex">
+        <Image src={tylerImage} alt="Tyler Sitting"/>
+        <div class="about-tyler relative">
+            <Image src={tylerPodcast} class="tyler-pod" alt="Tyler in front of microphone for podcast" />
+            <h3>Hi. I'm Tyler</h3>
+            <p>I was having a story play out in my mind of a young boy trying to pull back a bow and shoot it. He constantly waits for a man to come in and help teach him to work his bow.</p>
+            <p>When the boy looks at his reflection in shallow waters he sees a familiar yet foreign face. There is experience and wisdom in the features around his eyes.</p>
+            <p>I was having a story play out in my mind of a young boy trying to pull back a bow and shoot it. He constantly waits for a man to come in and help teach him to work his bow.</p>
+            <a class="btn-outline black" href="/">Hear Tyler's Story</a>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+
+    
+    .tyler-block {
+        margin-top:200px;
+        background:#fff;
+        position: relative;
+        top: -275px;
+        margin-bottom: -424px;
+        z-index: 0;
+
+        img {
+            position: relative;
+            top:-150px;
+        }
+
+        img.tyler-pod {
+            position: absolute;
+            top: -270px;
+            right: -26%;
+            width: 400px;
+        }
+
+        h3 {
+            font-size:1.5em;
+            margin-top:30px;
+            margin-bottom:30px;
+        }
+        p {
+            font-size: .8em;
+            padding-bottom:20px;
+        }
+        a {
+            z-index: 999;
+        }
+    }
+
+
+    .about-tyler {
+        background:#fff;
+        color:#151515;
+        max-width:600px;
+        padding:20px 40px;
+    }
+
+    
+</style>
