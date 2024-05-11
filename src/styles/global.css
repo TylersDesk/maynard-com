@@ -36,8 +36,13 @@ body {
 	color:#fff;
 }
 main {
-	max-width: calc(100% - 2.5em);
+	max-width: calc(100% - 4em);
 	margin: auto;
+
+	@media (min-width: 1024px) { 
+		max-width: 939px;
+		marign: auto;
+	}
 }
 h1,
 h2,
