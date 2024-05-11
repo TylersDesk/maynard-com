@@ -34,10 +34,8 @@ body {
 	color:#fff;
 }
 main {
-	width: 939px;
-	max-width: calc(100% - 2em);
+	max-width: calc(100% - 2.5em);
 	margin: auto;
-	padding: 1em 1em;
 }
 h1,
 h2,
@@ -144,9 +142,9 @@ hr {
 	body {
 		font-size: 18px;
 	}
-	main {
+	/* main {
 		padding: 1em;
-	}
+	} */
 }
 
 .sr-only {
