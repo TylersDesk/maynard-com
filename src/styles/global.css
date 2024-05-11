@@ -24,6 +24,8 @@ body {
 	text-align: left;
 	position: top left;
 	background:#151515;
+	background-image:radial-gradient(ellipse at left top, #232323 0%, rgba(21,21,21,21.1) 55%);
+	background-size:300px;
 	background-repeat: no-repeat;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
