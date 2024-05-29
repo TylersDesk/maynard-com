@@ -9,6 +9,7 @@ import AboutTyler from '../components/AboutTyler.astro';
 import Training from '../components/Training.astro';
 import Quote from '../components/Quote.astro';
 import ContactForm from '../components/ContactForm.astro';
+let backgroundUrl = 'url(/images/maynard-bg-block.png)';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -22,12 +23,28 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Header />
 		<main>
 			<Hero />
-			<!-- <Sidetabs /> -->
 		</main>
 		<AboutTyler />
+		<main class="logo-bg">
+			<Sidetabs />
+		</main>
 		<Training />
 		<Quote />
 		<ContactForm />
 		<Footer />
 	</body>
+
+	<style define:vars={{ backgroundUrl }}>
+		.logo-bg {
+			background-image:var(--backgroundUrl);
+			background-position: bottom;
+			background-size: 710px;
+			background-repeat: no-repeat;
+			background-position-x: -50px;
+			background-position-y: 420px;
+			padding-bottom: 20px;
+		}
+	</style>
 </html>
+
+

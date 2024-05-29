@@ -4,39 +4,40 @@ import tylerImage from '../images/tyler-sitting.jpg';
 import tylerPodcast from '../images/tyler-podcast.jpg';
 ---
 
-<div class="tyler-block pb-8">
-    <div class="container mx-auto flex">
-        <!-- <Image src={tylerImage} alt="Tyler Sitting"/> -->
-        <div class="about-tyler relative">
-            <Image src={tylerPodcast} class="tyler-pod" alt="Tyler in front of microphone for podcast" />
-            <div class="tyler-content pt-8">
-                <h3 class="pb-4">Hi. I'm Tyler</h3>
-                <p class="text-xl">I was having a story play out in my mind of a young boy trying to pull back a bow and shoot it. He constantly waits for a man to come in and help teach him to work his bow.</p>
-                <p class="text-xl">When the boy looks at his reflection in shallow waters he sees a familiar yet foreign face. There is experience and wisdom in the features around his eyes.</p>
-                <p class="text-xl">I was having a story play out in my mind of a young boy trying to pull back a bow and shoot it. He constantly waits for a man to come in and help teach him to work his bow.</p>
-                <p class="text-xl"></p><a class="btn-outline black text-xl" href="#">Hear Tyler's Story</a></p>
-            </div>
+<div class="tyler-block">
+    <div class="md:flex justify-center">
+        
+        <div class="images md:basis-1/2 lg:basis-1/3">
+            <Image src={tylerPodcast} class="tyler-pod w-full md:hidden" alt="Tyler in front of microphone for podcast" />
+            <Image src={tylerImage} alt="test" class="hidden md:block inset-y-0 right-0" />
+        </div>
+
+        <div class="tyler-content md:basis-1/2 lg:basis-2/3 p-8 bg-w md:mt-16 md:mb-16 text-xl/8">
+            <h3 class="pb-4 pt-4">Hi. I'm Tyler</h3>
+            <p>I was having a story play out in my mind of a young boy trying to pull back a bow and shoot it. He constantly waits for a man to come in and help teach him to work his bow.</p>
+            <p>When the boy looks at his reflection in shallow waters he sees a familiar yet foreign face. There is experience and wisdom in the features around his eyes.</p>
+            <p>I was having a story play out in my mind of a young boy trying to pull back a bow and shoot it. He constantly waits for a man to come in and help teach him to work his bow.</p>
+            <p><a class="btn-outline black text-xl mt-4 inline-block" href="#">Hear Tyler's Story</a></p>
         </div>
     </div>
 </div>
 
 
-
 <style>
 
     .tyler-block {
-        background:#fff;
-        color:#151515;        
-    }
-
-    .tyler-content {
-        max-width: calc(100% - 4em);
-        margin: auto;
-
-        a {
-            display: inline-block;
+        color:#151515;
+        
+        @media (min-width: 1024px) {
+            /* width: calc(100% - 4em);
+            margin:0 auto; */
         }
     }
 
+    .bg-w {
+        background-color: #fff;
+        /* margin-top:2em;
+        margin-bottom:2em; */
+    }
     
 </style>

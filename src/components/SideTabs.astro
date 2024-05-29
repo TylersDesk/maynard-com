@@ -4,100 +4,127 @@ let backgroundUrl = 'url(/images/maynard-bg-block.png)';
 
 ---
 
-<div class="sidetabs flex">
-    <div id="tabs" class="left-col flex-none">
-        <p>Helping men:</p>
+<div class="sidetabs md:flex">
+    <div id="tabs" class="left-col grid grid-cols-2 gap-4 md:block">
+        <h3 class="col-span-2 leading-6 helping">I help men: (Choose one)</h3>
         <h2 data-tab="1" class="active">Lead in relationship</h2>
         <h2 data-tab="2">Resolve discomfort</h2>
         <h2 data-tab="3">Connect to their masculine core</h2>
         <h2 data-tab="4">Establish presence in life</h2>
+    
     </div>
-    <div class="right-col grow">
+    <div class="right-col pt-8 grow">
         <div class="tab-content" data-content="1">
             <h3>Establish Safety.</h3>
-            <p>One of the ideas that has been on repeat in my adulthood is this idea of “killing the boy, and becoming the man”.</p>
-            <ul>
+            <p class="text-xl/8">One of the ideas that has been on repeat in my adulthood is this idea of “killing the boy, and becoming the man”.</p>
+            <ul class="text-xl/8">
                 <li>Do that</li>
                 <li>Do some of this</li>
                 <li>Just another thing for this one</li>
             </ul>
-            <p>Don't forget where you came from. Who you are. And what you do.</p>
+            <p class="text-xl/8">Don't forget where you came from. Who you are. And what you do.</p>
         </div>
         <div class="tab-content hidden" data-content="2">
             <h3>Addressing the discomfort.</h3>
-            <p>One of the ideas that has been on repeat in my adulthood is this idea of “killing the boy, and becoming the man”.</p>
-            <ul>
+            <p class="text-xl/8">One of the ideas that has been on repeat in my adulthood is this idea of “killing the boy, and becoming the man”.</p>
+            <ul class="text-xl/8">
                 <li>Do that</li>
                 <li>Do some of this</li>
                 <li>Just another thing for this one</li>
             </ul>
-            <p>Don't forget where you came from. Who you are. And what you do.</p>
+            <p class="text-xl/8">Don't forget where you came from. Who you are. And what you do.</p>
         </div>
         <div class="tab-content hidden" data-content="3">
             <h3>We are masculine.</h3>
-            <p>One of the ideas that has been on repeat in my adulthood is this idea of “killing the boy, and becoming the man”.</p>
-            <ul>
+            <p class="text-xl/8">One of the ideas that has been on repeat in my adulthood is this idea of “killing the boy, and becoming the man”.</p>
+            <ul class="text-xl/8">
                 <li>Do that</li>
                 <li>Do some of this</li>
                 <li>Just another thing for this one</li>
             </ul>
-            <p>Don't forget where you came from. Who you are. And what you do.</p>
+            <p class="text-xl/8">Don't forget where you came from. Who you are. And what you do.</p>
         </div>
         <div class="tab-content hidden" data-content="4">
             <h3>Presence</h3>
-            <p>One of the ideas that has been on repeat in my adulthood is this idea of “killing the boy, and becoming the man”.</p>
-            <ul>
+            <p class="text-xl/8">One of the ideas that has been on repeat in my adulthood is this idea of “killing the boy, and becoming the man”.</p>
+            <ul class="text-xl/8">
                 <li>Do that</li>
                 <li>Do some of this</li>
                 <li>Just another thing for this one</li>
             </ul>
-            <p>Don't forget where you came from. Who you are. And what you do.</p>
+            <p class="text-xl/8">Don't forget where you came from. Who you are. And what you do.</p>
         </div>
     </div>
 </div>
 <style define:vars={{ backgroundUrl }}>
-    .sidetabs {
-        margin-top:80px;
-        background-image:var(--backgroundUrl);
-        background-position: bottom;
-        background-size: 900px;
-        background-repeat: no-repeat;
-        background-position-x: 80px;
-        background-position-y: 410px;
-        padding-bottom: 310px;
+
+    .sidetabs  {
+        margin-top:60px;
+        margin-bottom:60px;
     }
 
     .left-col {
-        max-width:340px;
-        border-right:1px solid #fff;
-        padding-right:75px;
+        @media (min-width: 768px) {
+            max-width:350px;
+            border-right:1px solid rgb(160,160,160);
+            padding-right:70px;
+        }
     }
+    
 
     .left-col p {
         font-size:14px;
     }
 
     .left-col h2 {
-        font-size:1.4em;
-        padding-bottom:30px;
-        border-bottom: 1px solid rgb(160, 160, 160);
-        margin-top:30px;
-        margin-bottom:30px;
+        font-size:1.4rem;
+        border:1px solid #fff;
+        padding:20px;
         color:rgb(160, 160, 160);
         cursor: pointer;
         transform: scale(1); /* you need a scale here to allow it to transition in both directions */
         transition: 0.15s all ease;
+        
+        @media (min-width: 768px) {
+            font-size:1.2em;
+            padding-bottom:30px;
+            border:none;
+            padding-left:0px;
+            border-bottom: 1px solid rgb(160, 160, 160);
+            margin-top:30px;    
+            margin-bottom:30px;
+        }
+
+        
+        .helper {
+            display: block;
+        }
+        
 
         &.active {
             color:#fff;
         }
 
         &:hover {
-            padding-left:10px;
+
+            color:#fff;
+            @media (min-width: 768px) {
+                padding-left:10px;  
+            }
         }
     }
+
+    .left-col h3 {
+        font-size: 1rem;
+        font-family: 'Source Sans 3', sans-serif;
+
+    }
+    
     .right-col {
-        padding-left:75px;
+
+        @media (min-width: 768px) {
+            padding-left:70px;
+        }
     }
 
     .right-col {
@@ -109,18 +136,18 @@ let backgroundUrl = 'url(/images/maynard-bg-block.png)';
             margin-bottom:30px;
         }
 
-        p {
-            font-size: .8em;
-        }
-
         ul{
             margin-bottom: 30px;
 
             li {
                 list-style:disc;
                 margin-left:30px;
-                font-size: .8em;
+                font-size: 1.5rem;
             }
+        }
+
+        p {
+            font-size:1.5rem;
         }
     }
 </style>
