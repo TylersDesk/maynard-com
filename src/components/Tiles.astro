@@ -1,0 +1,89 @@
+---
+import Image from 'astro/components/Image.astro';
+import tylerPodcast from '../images/tyler-podcast.jpg';
+import tile1 from '../images/tiles/1.jpg';
+import tile2 from '../images/tiles/2.jpg';
+import tile3 from '../images/tiles/3.jpg';
+import tile4 from '../images/tiles/4.jpg';
+import tile5 from '../images/tiles/edge.jpg';
+import tile6 from '../images/tiles/goals.jpg';
+import tile7 from '../images/tiles/whole.jpg';
+import tile8 from '../images/tiles/direction.jpg';
+---
+<div class="tiles grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 pt-16">
+    <a class="" href="#">
+        <Image src={tile1} class="tyler-pod" alt="Tyler in front of microphone for podcast" />
+        <div class="details px-4">
+            <h2>test</h2>
+            <p>Here is some content to follow</p>
+        </div>
+    </a>
+    <a class="" href="#">
+        <Image src={tile2} class="tyler-pod" alt="Tyler in front of microphone for podcast" />
+        <div class="details px-4">
+            <h2>Alignment</h2>
+            <p>Connect your inner world and your outer world.</p>
+        </div>
+    </a>
+    <a class="" href="#"> 
+        <Image src={tile3} class="tyler-pod" alt="Tyler in front of microphone for podcast" />
+        <div class="details px-4">
+            <h2>Focus</h2>
+            <p>Direct energy to the areas in life that matter.</p>
+        </div>
+    </a>
+    <a class="" href="#">
+        <Image src={tile4} class="tyler-pod" alt="Tyler in front of microphone for podcast" />
+        <div class="details px-4">
+            <h2>Balance</h2>
+            <p>Shift mental and physical energy to create peace of mind.</p>
+        </div>
+    </a>
+    <a class="" href="#">
+        <Image src={tile5} class="tyler-pod" alt="Tyler in front of microphone for podcast" />
+        <div class="details px-4">
+            <h2>Find Your Edge</h2>
+            <p>Move towards and meet the areas of life that you are resisting.</p>
+        </div>
+    </a>
+    <a class="" href="#">
+        <Image src={tile6} class="tyler-pod" alt="Tyler in front of microphone for podcast" />
+        <div class="details px-4">
+            <h2>Heirarchy of Goals</h2>
+            <p>Create a path to the meaningful outcomes you crave.</p>
+        </div>
+    </a>
+    <a class="" href="#">
+        <Image src={tile7} class="tyler-pod" alt="Tyler in front of microphone for podcast" />
+        <div class="details px-4">
+            <h2>Become Whole</h2>
+            <p>Integrate parts of yourself you have had to abandon to feel belonging.</p>
+        </div>
+    </a>
+    <a class="" href="#">
+        <Image src={tile8} class="tyler-pod" alt="Tyler in front of microphone for podcast" />
+        <div class="details px-4">
+            <h2>Direction in Life</h2>
+            <p>Help find direction to places where you are feeling stuck.</p>
+        </div>
+    </a>
+</div>
+
+<style>
+    .tiles {
+        > a {
+            border:1px solid rgb(var(--gray-line));
+            display:block;
+            color:rgb(var(--offwhite));
+
+            h2 {
+                padding-top:20px;
+                font-size:1.1rem;
+                text-transform: capitalize;
+            }
+            p {
+                font-size:.8rem;
+            }
+        }
+    }
+</style>

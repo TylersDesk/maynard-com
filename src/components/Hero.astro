@@ -1,23 +1,32 @@
 ---
+import Image from 'astro/components/Image.astro';
+import tylerPodcast from '../images/tyler-podcast.jpg';
+import tylerimage from '../images/tiles/tyler.jpg'; 
 ---
-<div class="hero pb-16">
-    <h1 class="pb-4 antialiased">I help men <br /><b>develop the tools</b> to maneuver through life’s bullshit.</h1>
-    <p class="text-2xl subpixel-antialiased pb-4">Stop suffering alone. <br />
-        Take the first step out of stuck. <br />
-        Examine and remove the shackles. <br />
-        One call at a time.
-    </p>
-    <a class="text-2xl inline-block" href="#">
-        Explore the Tools
-    </a>
+<div class="hero pb-16 pt-16 grid gap-4 grid-cols-1 sm:grid-cols-2">
+    <div class="images basis-full sm:basis-1/2">
+        <Image src={tylerPodcast} class="tyler-pod" alt="Tyler in front of microphone for podcast" />
+    </div>
+
+    <div class="images basis-full sm:basis-1/2">
+        <h1 class="pb-4 antialiased">I help men <br /><b>develop the tools</b> to maneuver through life’s bullshit.</h1>
+        <p class="text-2xl subpixel-antialiased">Stop suffering alone. <br />
+            Take the first step out of stuck. <br />
+            Examine and remove the shackles. <br />
+            One call at a time.
+        </p>
+        <!-- <a class="text-2xl inline-block" href="#">
+            Explore the Tools
+        </a> -->
+    </div>
 </div>
 
 <style>
-
+    .hero {
+        border-bottom: 1px solid rgb(var(--gray-line)); 
+    }
     .hero h1 {
-        font-family: Georgia, Times, "Times New Roman", serif;
         color:#fff;
-        max-width:75%;
         font-size: 1.8em;
     }
 

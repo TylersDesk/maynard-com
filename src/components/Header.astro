@@ -156,7 +156,6 @@ let backgroundUrl = 'url(/images/maynard-logo-grey-horizontal.png)';
 
 		.mobile-links {
 			a {
-				font-family: Georgia, 'Times New Roman', Times, serif;
 				font-size:1.8em;
 				padding-bottom:20px;
 				display: block;
@@ -171,10 +170,15 @@ let backgroundUrl = 'url(/images/maynard-logo-grey-horizontal.png)';
 	header {
 		max-width: calc(100% - 4em);
     	margin: auto;
+		border-bottom:1px solid rgb(67, 67, 67);
 
 		@media (min-width: 1024px) { 
-			max-width: 939px;
+			max-width: 970px;
 			marign: auto;
+		}
+
+		@media (min-width: 1100px) { 
+			max-width: 1088px;
 		}
 
 		.social-icons {
@@ -203,9 +207,10 @@ let backgroundUrl = 'url(/images/maynard-logo-grey-horizontal.png)';
 			}
 		}
 		.nav-links a{
-			font-size:.9em;
-			font-weight: 300;
-			text-transform: ;
+			font-size: 0.7em;
+			font-weight: 500;
+			text-transform: uppercase;
+			color: rgb(229, 231, 235);
 		}
 	}
 	a {
@@ -217,3 +222,4 @@ let backgroundUrl = 'url(/images/maynard-logo-grey-horizontal.png)';
 		fill:#fff;
 	}
 </style>
+

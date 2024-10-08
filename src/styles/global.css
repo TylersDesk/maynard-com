@@ -9,16 +9,18 @@
 	--accent-dark: #000d8a;
 	--black: 15, 18, 25;
 	--white: #fff;
+	--offwhite: 229, 231, 235;
 	--gray: 96, 115, 159;
 	--gray-light: 229, 233, 240;
 	--gray-dark: 34, 41, 57;
 	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
+	--gray-line: 67, 67, 67;
 }
 
 body {
-	font-family: 'Source Sans 3', sans-serif;
+	font-family: "Familjen Grotesk", serif;
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -29,19 +31,21 @@ body {
 	background-repeat: no-repeat;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
+	color: rgb(var(--offwhite));
 	font-size: 24px;
 	font-weight: 200;
 	line-height: 1.7;
-	color:#fff;
 }
 main {
 	max-width: calc(100% - 4em);
 	margin: auto;
 
 	@media (min-width: 1024px) { 
-		max-width: 939px;
-		marign: auto;
+		max-width: 970px;
+	}
+
+	@media (min-width: 1100px) { 
+		max-width: 1088px;
 	}
 }
 h1,
@@ -53,7 +57,7 @@ h6 {
 	margin: 0 0 0.5rem 0;
 	color: rgb(var(--white));
 	line-height: 1.2;
-	font-family:Georgia, 'Times New Roman', Times, serif;
+	font-family: "Familjen Grotesk", serif;
 }
 h1 {
 	font-size: 3.052em;
@@ -170,4 +174,16 @@ hr {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+}
+
+
+/* <uniquifier>: Use a unique and descriptive class name
+   <weight>: Use a value from 400 to 700
+*/
+
+.font-reg {
+  font-family: "Familjen Grotesk", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
