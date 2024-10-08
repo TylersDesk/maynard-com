@@ -5,7 +5,7 @@ import tylerimage from '../images/tiles/tyler.jpg';
 ---
 <div class="hero pb-16 pt-16 grid gap-4 grid-cols-1 sm:grid-cols-2">
     <div class="images basis-full sm:basis-1/2">
-        <Image src={tylerPodcast} class="tyler-pod" alt="Tyler in front of microphone for podcast" />
+        <Image src={tylerPodcast} class="tyler-pod rounded-sm" alt="Tyler in front of microphone for podcast" />
     </div>
 
     <div class="images basis-full sm:basis-1/2">
@@ -38,5 +38,10 @@ import tylerimage from '../images/tiles/tyler.jpg';
         border:1px solid #fff;
         padding:10px 20px;
         color:#fff;
+    }
+
+    .tyler-pod {
+        box-shadow: -6px 10px 36px -11px rgb(75,75,75);
+        border: 2px solid rgb(188 188 188 / 49%);
     }
 </style>
