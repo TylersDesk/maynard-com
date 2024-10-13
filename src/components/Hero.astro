@@ -1,16 +1,20 @@
 ---
 import Image from 'astro/components/Image.astro';
 import tylerPodcast from '../images/tyler-podcast.jpg';
-import tylerimage from '../images/tiles/tyler.jpg'; 
+import tylerimage from '../images/tiles/tyler.jpg';
+import tylerWide from '../images/Tyler-Manynard-Headshot-Wide.jpg';
 ---
-<div class="hero pb-16 pt-16 grid gap-4 grid-cols-1 sm:grid-cols-2">
-    <div class="images basis-full sm:basis-1/2">
-        <Image src={tylerPodcast} class="tyler-pod rounded-sm" alt="Tyler in front of microphone for podcast" />
+<div class="hero pb-8 pt-8 lg:pb-16 lg:pt-16 grid gap-4 grid-cols-1 lg:grid-cols-2 items-center">
+    
+    
+    <div class="images basis-full sm:basis-1/2 lg:order-last">
+        <!-- <Image src={tylerPodcast} class="tyler-pod rounded-sm" alt="Tyler in front of microphone for podcast" /> -->
+        <Image src={tylerWide} class="tyler-pod rounded-sm" alt="Tyler Maynard - Men's Masuclinity and Executive Coach" />
     </div>
 
     <div class="images basis-full sm:basis-1/2">
         <h1 class="pb-4 antialiased">I help men <br /><b>develop the tools</b> to maneuver through life’s bullshit.</h1>
-        <p class="text-2xl subpixel-antialiased">Stop suffering alone. <br />
+        <p class="text-xl subpixel-antialiased">Stop suffering alone. <br />
             Take the first step out of stuck. <br />
             Examine and remove the shackles. <br />
             One call at a time.
@@ -19,6 +23,8 @@ import tylerimage from '../images/tiles/tyler.jpg';
             Explore the Tools
         </a> -->
     </div>
+
+    
 </div>
 
 <style>
